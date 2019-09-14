@@ -4,6 +4,7 @@ public class ShopOwner implements Observer {
 	private Subject watchman;
 	public ShopOwner(Subject watchman) {
 		this.watchman = watchman;
+		watchman.registerObserver(this);
 	}
 	public void update(int warning) {
 		

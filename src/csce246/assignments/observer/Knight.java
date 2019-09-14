@@ -4,6 +4,7 @@ public class Knight implements Observer {
 	private Subject watchman;
 	public Knight(Subject watchman) {
 		this.watchman = watchman;
+		watchman.registerObserver(this);
 	}
 	public void update(int warning) {
 		if (warning == 1) {

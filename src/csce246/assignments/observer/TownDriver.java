@@ -15,17 +15,15 @@ public class TownDriver {
 		Observer monte = new Knight(watchman);
 		
 		System.out.println("\n-----------------------\n");
-		watchman.registerObserver(fredrick);
-		watchman.registerObserver(lillian);
-		watchman.registerObserver(monte);
+		
 		
 		watchman.issueWarning(1);
-		
+		watchman.notifyObserver();
 		
 		System.out.println("\n-----------------------\n");
 		
 		watchman.issueWarning(2);
-		
+		watchman.notifyObserver();
 	
 	}
 }

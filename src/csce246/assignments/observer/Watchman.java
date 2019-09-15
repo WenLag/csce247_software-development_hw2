@@ -2,6 +2,12 @@ package csce246.assignments.observer;
 
 import java.util.ArrayList;
 
+/**
+ * Watchman.java - class that has actions methods for the observers.
+ * @author Nguyen
+ *
+ */
+
 public class Watchman implements Subject  {
 	private int warning;
 	ArrayList<Observer> observers;
@@ -9,11 +15,17 @@ public class Watchman implements Subject  {
 		observers = new ArrayList<Observer>();
 	}
 	
+	/**
+	 * Retrieve new observer and add it to the ArrayList
+	 */
 	public void registerObserver(Observer observer) {
 		observers.add(observer);
 		
 	}
 	
+	/**
+	 * Remove observers who do not want to be in the ArrayList anymore
+	 */
 	public void removeObserver(Observer observer) {
 		int i = observers.indexOf(observer);
 		if (i >= 0) {
@@ -21,6 +33,9 @@ public class Watchman implements Subject  {
 		}
 	}
 	
+	/**
+	 * Notify observers about the warnings
+	 */
 	public void notifyObserver() {
 		for (int i = 0; i < observers.size(); i++) {
 			observers.get(i).update(warning);;
@@ -28,6 +43,12 @@ public class Watchman implements Subject  {
 		}
 		
 	}
+	
+	/**
+	 * method that issues the warning severity to the watchman and print out how many trumpet is played
+	 * @param warning
+	 * @return warning number
+	 */
 	public int issueWarning(int warning) {
 		this.warning = warning;
 		if (warning==1) {

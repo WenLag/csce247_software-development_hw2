@@ -1,13 +1,13 @@
 package csce246.assignments.observer;
 /**
- * 
+ * TownDriver.Java - main class for demonstrating the java observer pattern 
  * @author Nguyen
+ * @version 1.0
  * 
  */
 public class TownDriver {
 	public static void main(String[] args) {
 		System.out.println("A Happy Little City");
-		
 		
 		Watchman watchman = new Watchman();
 		Observer fredrick = new ShopOwner(watchman);

@@ -1,5 +1,9 @@
 package csce246.assignments.observer;
-
+/**
+ * Teacher.java - an observer class that gets updated on warning
+ * @author Nguyen
+ *
+ */
 public class Teacher implements Observer {
 	private Subject watchman;
 	public Teacher(Subject watchman) {

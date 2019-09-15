@@ -1,5 +1,9 @@
 package csce246.assignments.observer;
-
+/**
+ * Knight.java - an observer class that gets updated on warning
+ * @author Nguyen
+ *
+ */
 public class Knight implements Observer {
 	private Subject watchman;
 	public Knight(Subject watchman) {

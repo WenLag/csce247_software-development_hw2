@@ -8,7 +8,7 @@ public class Teacher implements Observer {
 	private Subject watchman;
 	public Teacher(Subject watchman) {
 		this.watchman = watchman;
-		watchman.registerObserver(this);
+		this.watchman.registerObserver(this);
 	}
 	public void update(int warning) {
 		if (warning == 1) {

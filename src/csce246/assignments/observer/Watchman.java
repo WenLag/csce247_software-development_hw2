@@ -9,8 +9,12 @@ import java.util.ArrayList;
  */
 
 public class Watchman implements Subject  {
-	private int warning;
+	
 	ArrayList<Observer> observers;
+	int warning;
+	/**
+	 * watchman constructor
+	 */
 	public Watchman(){
 		observers = new ArrayList<Observer>();
 	}
@@ -49,7 +53,7 @@ public class Watchman implements Subject  {
 	 * @param warning
 	 * @return warning number
 	 */
-	public int issueWarning(int warning) {
+	public void issueWarning(int warning) {
 		this.warning = warning;
 		if (warning==1) {
 			System.out.println("WARNING: 1 trumpet as played!");
@@ -60,7 +64,7 @@ public class Watchman implements Subject  {
 			System.out.println("WARNING: 2 trumpets were played!");
 			
 		}
-		return warning;
+		
 	
 	}
 }

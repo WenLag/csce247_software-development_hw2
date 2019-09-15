@@ -24,6 +24,6 @@ public class TownDriver {
 		
 		watchman.issueWarning(2);
 		watchman.notifyObserver();
-	
+		
 	}
 }
